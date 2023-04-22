@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import CustomButton from '../custombutton.js';
 
-export default function Login({navigation}) {
+export default function Signup({navigation}) {
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
+  const [mail, setMail] = useState("");
 
-  function tryLogin() {
-    if(pseudo && password) {
-      navigation.navigate('DrawerProfile', {
+  function trySignup() {
+    if(pseudo && password && mail) {
+      navigation.navigate('', {
         pseudo: pseudo
       });
     } else {
@@ -18,6 +19,13 @@ export default function Login({navigation}) {
 
   return (
     <View style={styles.container}>
+        <Text style={styles.text}>Votre adresse mail</Text>
+      <TextInput 
+        style={styles.input} 
+        placeholder="Mail" 
+        value={mail}
+        onChangeText={setMail}
+      />
       <Text style={styles.text}>Votre pseudo</Text>
       <TextInput 
         inlineImageLeft='search_icon' 
@@ -34,8 +42,8 @@ export default function Login({navigation}) {
         value={password}
         onChangeText={setPassword}
       />
-      <CustomButton onPress={tryLogin}
-        title="Connexion"
+      <CustomButton onPress={trySignup}
+        title="Inscription"
       />
     </View>
   );

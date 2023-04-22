@@ -1,11 +1,12 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Home from './src/components/Home/home';
 import Login from './src/components/Login/login';
-import Profile from './src/components/Profile/profile';
+import Signup from './src/components/Sign_up/signup';
+import CustomDrawer from './src/components/drawer';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -19,8 +20,13 @@ export default function App() {
             component={Home}
             options={{title: 'Accueil'}}
           />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Login" component={Login} options={{title: 'Connexion'}} />
+          <Stack.Screen name="Signup" component={Signup} options={{title: 'Inscription'}} />
+          <Stack.Screen
+            name="DrawerProfile"
+            component={CustomDrawer}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

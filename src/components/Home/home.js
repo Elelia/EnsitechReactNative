@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import CustomButton from '../custombutton.js';
 
@@ -7,7 +7,7 @@ export default function Home({navigation}) {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Bienvenue sur mon application !</Text>
-        <Text style={styles.text}>Vous pouvez vous connecter ou vous inscrire pour accéder aux différents pages de l'application.</Text>
+        <Text style={styles.text}>Vous pouvez vous connecter ou vous inscrire pour accéder aux différentes pages de l'application.</Text>
         <CustomButton onPress={() =>
             navigation.navigate('Login')
           }
@@ -15,7 +15,7 @@ export default function Home({navigation}) {
         />
         <View style={styles.separator}></View>
         <CustomButton onPress={() =>
-            navigation.navigate('')
+            navigation.navigate('Signup')
           }
           title="Inscription"
         />

@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Profile() {
+export default function Profile({route}) {
+  const {pseudo} = route.params ? route.params.pseudo : '';
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Votre profile</Text>
+      <Text style={styles.text}>Bonjour {pseudo} ! Bienvenue sur votre profil.</Text>
+      <Text style={styles.text}>Vous pouvez à présent accéder aux autres pages de
+      l'application via le menu.</Text>
     </View>
   );
 }
