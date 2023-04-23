@@ -9,9 +9,8 @@ export default function Signup({navigation}) {
 
   function trySignup() {
     if(pseudo && password && mail) {
-      navigation.navigate('', {
-        pseudo: pseudo
-      });
+      alert("Vous voilà inscrit !");
+      navigation.navigate('Home');
     } else {
       alert("Vous n'avez pas saisi les informations nécessaires.");
     }

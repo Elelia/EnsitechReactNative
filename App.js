@@ -7,8 +7,12 @@ import Home from './src/components/Home/home';
 import Login from './src/components/Login/login';
 import Signup from './src/components/Sign_up/signup';
 import CustomDrawer from './src/components/drawer';
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Merriweather-Black': require('./assets/fonts/Merriweather-Black.ttf'),
+  });
   const Stack = createNativeStackNavigator();
 
   return (

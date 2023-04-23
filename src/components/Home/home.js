@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         fontSize: 30,
         justifyContent: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'Merriweather-Black'
     },
     text: {
         marginTop: 50,
