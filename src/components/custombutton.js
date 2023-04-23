@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     appButtonText: {
       fontSize: 18,
       color: "#fff",
-      fontWeight: "bold",
+      fontFamily: 'SourceSansPro-Bold',
       alignSelf: "center",
       textTransform: "uppercase"
     }

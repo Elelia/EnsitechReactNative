@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import CustomButton from '../custombutton.js';
-import { Icon } from "@react-native-material/core";
 
 export default function Login({navigation}) {
   const [pseudo, setPseudo] = useState("");
@@ -45,12 +44,16 @@ export default function Login({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 80
+    alignItems: 'center',
+    backgroundColor: '#fff'
   },
   text: {
-    marginTop: 20
+    marginTop: 20,
+    fontFamily: 'SourceSansPro-Bold',
+    fontSize: 17
   },
   input: {
+    margin: 12,
     borderColor: "gray",
     width: "100%",
     borderWidth: 1,

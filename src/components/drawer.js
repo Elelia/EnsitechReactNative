@@ -21,6 +21,9 @@ function CustomDrawer({navigation, route}) {
         component={Profile}
         options={{ 
           drawerLabel: 'Profil',
+          headerStyle: {
+            backgroundColor: '#FCB1E5',
+          },
           drawerIcon: () => (
             <Ionicons name="person" size={24} color="#9F5BA3" />
           ), 
@@ -32,6 +35,9 @@ function CustomDrawer({navigation, route}) {
         component={Cats}
         options={{ 
           drawerLabel: 'Chats',
+          headerStyle: {
+            backgroundColor: '#FCB1E5',
+          },
           drawerIcon: () => (
             <Ionicons name="paw" size={24} color="#9F5BA3" />
           ), 
@@ -42,6 +48,9 @@ function CustomDrawer({navigation, route}) {
         component={MoreCats}
         options={{ 
           drawerLabel: 'Encore chats',
+          headerStyle: {
+            backgroundColor: '#FCB1E5',
+          },
           drawerIcon: () => (
             <Ionicons name="paw" size={24} color="#9F5BA3" />
           ),

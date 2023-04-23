@@ -31,19 +31,21 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff'
     },
     title: {
-        marginTop: 5,
-        marginBottom: 5,
-        fontSize: 30,
-        justifyContent: 'center',
-        textAlign: 'center',
-        fontFamily: 'Merriweather-Black'
+      marginTop: 20,
+      marginBottom: 5,
+      fontSize: 35,
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: 'SourceSansPro-Black'
     },
     text: {
-        marginTop: 50,
-        marginBottom: 30,
-        fontSize: 17,
-        justifyContent: 'center',
-        textAlign: 'center'
+      marginHorizontal: 5,
+      marginTop: 50,
+      marginBottom: 30,
+      fontSize: 20,
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontFamily: 'SourceSansPro-Light'
     },
     separator: {
         marginVertical: 8
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
     image: {
         marginTop: 100,
         marginBottom: 10,
-        width: 200,
-        height: 200
+        width: 220,
+        height: 220
     }
 });

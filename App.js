@@ -11,7 +11,9 @@ import { useFonts } from 'expo-font';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    'Merriweather-Black': require('./assets/fonts/Merriweather-Black.ttf'),
+    'SourceSansPro-Black': require('./assets/fonts/SourceSansPro-Black.ttf'),
+    'SourceSansPro-Bold': require('./assets/fonts/SourceSansPro-Bold.ttf'),
+    'SourceSansPro-Light': require('./assets/fonts/SourceSansPro-Light.ttf'),
   });
   const Stack = createNativeStackNavigator();
 
@@ -22,10 +24,33 @@ export default function App() {
           <Stack.Screen
             name="Home"
             component={Home}
-            options={{title: 'Accueil'}}
+            options={{
+              title: 'Accueil',
+              headerStyle: {
+                backgroundColor: '#FCB1E5',
+              },
+            }}
           />
-          <Stack.Screen name="Login" component={Login} options={{title: 'Connexion'}} />
-          <Stack.Screen name="Signup" component={Signup} options={{title: 'Inscription'}} />
+          <Stack.Screen 
+            name="Login" 
+            component={Login} 
+            options={{
+              title: 'Connexion',
+              headerStyle: {
+                backgroundColor: '#FCB1E5',
+              },
+            }}
+          />
+          <Stack.Screen 
+            name="Signup" 
+            component={Signup} 
+            options={{
+              title: 'Inscription',
+              headerStyle: {
+                backgroundColor: '#FCB1E5',
+              },
+            }} 
+          />
           <Stack.Screen
             name="DrawerProfile"
             component={CustomDrawer}

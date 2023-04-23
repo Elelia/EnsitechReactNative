@@ -7,7 +7,7 @@ export default function Cats({navigation}) {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Tu aimes les chats ? Moi aussi !</Text>
-        <Image style={styles.image} source={require('../../../assets/wassup.jpg')}/>
+        <Image style={styles.image} source={require('../../../assets/bop.jpg')}/>
         <Image style={styles.image} source={require('../../../assets/yo.jpg')}/>
       </View>
     );
@@ -15,12 +15,14 @@ export default function Cats({navigation}) {
   
 const styles = StyleSheet.create({
     container: {
-      alignItems: 'center'
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#fff'
     },
     title: {
-        marginTop: 5,
-        marginBottom: 5,
+        margin: 15,
         fontSize: 30,
+        fontFamily: 'SourceSansPro-Bold',
         justifyContent: 'center',
         textAlign: 'center'
     },
@@ -35,8 +37,8 @@ const styles = StyleSheet.create({
         marginVertical: 8
     },
     image: {
-        marginTop: 100,
-        marginBottom: 10,
+        marginTop: 50,
+        marginBottom: 50,
         width: 200,
         height: 200,
         borderRadius: 10

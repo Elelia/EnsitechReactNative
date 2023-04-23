@@ -51,14 +51,16 @@ export default function Signup({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     backgroundColor: '#fff'
   },
   text: {
-    marginHorizontal: 80,
-    marginTop: 20
+    marginTop: 20,
+    fontFamily: 'SourceSansPro-Bold',
+    fontSize: 17
   },
   input: {
-    marginHorizontal: 80,
+    margin: 12,
     borderColor: "gray",
     width: "100%",
     borderWidth: 1,
