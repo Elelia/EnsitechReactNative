@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import CustomButton from '../custombutton.js';
+import { Icon } from "@react-native-material/core";
 
 export default function Login({navigation}) {
   const [pseudo, setPseudo] = useState("");

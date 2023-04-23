@@ -12,7 +12,7 @@ const CustomButton = ({ onPress, title }) => (
 const styles = StyleSheet.create({
     appButtonContainer: {
       elevation: 8,
-      backgroundColor: "#009688",
+      backgroundColor: "#9F5BA3",
       borderRadius: 10,
       paddingVertical: 10,
       paddingHorizontal: 12

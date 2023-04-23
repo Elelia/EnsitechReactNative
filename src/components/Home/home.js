@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import CustomButton from '../custombutton.js';
 
 export default function Home({navigation}) {
@@ -26,6 +26,7 @@ export default function Home({navigation}) {
   
 const styles = StyleSheet.create({
     container: {
+      flex: 1,
       alignItems: 'center',
       backgroundColor: '#fff'
     },
