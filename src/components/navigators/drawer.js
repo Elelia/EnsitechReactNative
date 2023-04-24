@@ -1,10 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Profile from './Profile/profile';
-import Cats from './Content/cats';
-import MoreCats from './Content/morecats';
+import Profile from '../Profile/profile';
+import Cats from '../Content/cats';
+import MoreCats from '../Content/morecats';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import Stack from './stack';
 
 const Drawer = createDrawerNavigator();
 
@@ -57,18 +57,30 @@ function CustomDrawer({navigation, route}) {
         }}
       />
       <Drawer.Screen
-      name="Logout"
-      component={View}
-      options={{
-        title: 'Déconnexion',
-        drawerLabel: 'Déconnexion',
-        headerShown: false,
-        drawerIcon: () => (
-          <Ionicons name="moon" size={24} color="#9F5BA3" />
-        ),
-        onPress: handleLogout,
-      }}
+        name="Logout"
+        component={Stack}
+        options={{
+          title: 'Déconnexion',
+          drawerLabel: 'Déconnexion',
+          headerShown: false,
+          drawerIcon: () => (
+            <Ionicons name="moon" size={24} color="#9F5BA3" />
+          ),
+        }}
       />
+      {/* <Drawer.Screen
+        name="Logout"
+        component={View}
+        options={{
+          title: 'Déconnexion',
+          drawerLabel: 'Déconnexion',
+          headerShown: false,
+          drawerIcon: () => (
+            <Ionicons name="moon" size={24} color="#9F5BA3" />
+          ),
+          onPress: handleLogout,
+        }}
+      /> */}
     </Drawer.Navigator>
   );
 }

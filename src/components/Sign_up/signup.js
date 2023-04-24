@@ -60,9 +60,8 @@ const styles = StyleSheet.create({
     fontSize: 17
   },
   input: {
-    margin: 12,
     borderColor: "gray",
-    width: "100%",
+    width: "50%",
     borderWidth: 1,
     borderRadius: 10,
     padding: 10,
