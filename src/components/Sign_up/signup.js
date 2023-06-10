@@ -8,6 +8,9 @@ export default function Signup({navigation}) {
   const [mail, setMail] = useState("");
 
   function trySignup() {
+    console.log(pseudo);
+    console.log(password);
+    console.log(mail);
     if(pseudo && password && mail) {
       alert("Vous voilà inscrit !");
       navigation.navigate('Home');

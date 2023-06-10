@@ -13,6 +13,8 @@ export default function Profile({route}) {
       <Text style={styles.text}>Votre prénom : Lisa</Text>
       <Text style={styles.text}>Votre ville : Nice</Text>
       <Text style={styles.text}>Votre métier : Développeuse</Text>
+      <Text style={styles.title}>Options</Text>
+      <Text style={styles.text}>Les options ici.</Text>
     </View>
   );
 }

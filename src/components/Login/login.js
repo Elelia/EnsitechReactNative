@@ -7,6 +7,8 @@ export default function Login({navigation}) {
   const [password, setPassword] = useState("");
 
   function tryLogin() {
+    console.log(pseudo);
+    console.log(password);
     if(pseudo && password) {
       navigation.navigate('DrawerProfile', {
         pseudo: pseudo
