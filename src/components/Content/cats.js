@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+//import CounterContext from '../utils/counterContext';
+import { useFocusEffect } from '@react-navigation/native';
 
 export default function Cats({navigation}) {
     const [counter, setCounter] = useState(0);
 
-    useEffect(() => {
-        console.log(counter);
-        setCounter(prevCounter => prevCounter + 1);
-      }, []);
+    useFocusEffect(
+        React.useCallback(() => {
+          setCounter(prevCounter => prevCounter + 1);
+      
+          return () => {
+            // Action facultative à effectuer lorsque vous quittez la page spécifique
+          };
+        }, [])
+      );
 
     return (
         <View style={styles.container}>

@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Stack from './src/components/navigators/stack';
 import { useFonts } from 'expo-font';
+import { ThemeProvider } from './src/components/utils/themeContext';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -13,10 +14,12 @@ export default function App() {
   });
 
   return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack/>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <ThemeProvider>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <Stack/>
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 }

@@ -68,19 +68,6 @@ function CustomDrawer({navigation, route}) {
           ),
         }}
       />
-      {/* <Drawer.Screen
-        name="Logout"
-        component={View}
-        options={{
-          title: 'Déconnexion',
-          drawerLabel: 'Déconnexion',
-          headerShown: false,
-          drawerIcon: () => (
-            <Ionicons name="moon" size={24} color="#9F5BA3" />
-          ),
-          onPress: handleLogout,
-        }}
-      /> */}
     </Drawer.Navigator>
   );
 }

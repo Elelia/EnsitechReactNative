@@ -1,9 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import axios from 'axios';
+import ThemeContext from '../utils/themeContext.js';
 
 export default function Cats() {
     const [catsList, setCatsList] = useState([]);
+    const { theme } = useContext(ThemeContext);
+
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: theme.background
+        },
+        scrollViewContent: {
+            flexGrow: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+        title: {
+            margin: 15,
+            fontSize: 30,
+            fontFamily: 'SourceSansPro-Bold',
+            textAlign: 'center',
+            color: theme.text
+        },
+        text: {
+            marginTop: 50,
+            marginBottom: 30,
+            fontSize: 17,
+            justifyContent: 'center',
+            textAlign: 'center',
+            color: theme.text
+        },
+        image: {
+            marginTop: 50,
+            marginBottom: 50,
+            width: 200,
+            height: 200,
+            borderRadius: 10
+        }
+    });
 
     useEffect(() => {
         const fetchCats = async () => {
@@ -31,36 +67,3 @@ export default function Cats() {
       </View>
     );
 }
-  
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff'
-    },
-    scrollViewContent: {
-        flexGrow: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-        margin: 15,
-        fontSize: 30,
-        fontFamily: 'SourceSansPro-Bold',
-        //justifyContent: 'center',
-        textAlign: 'center'
-    },
-    text: {
-        marginTop: 50,
-        marginBottom: 30,
-        fontSize: 17,
-        justifyContent: 'center',
-        textAlign: 'center'
-    },
-    image: {
-        marginTop: 50,
-        marginBottom: 50,
-        width: 200,
-        height: 200,
-        borderRadius: 10
-    }
-});
